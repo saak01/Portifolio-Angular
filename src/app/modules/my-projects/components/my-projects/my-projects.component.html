@@ -1,0 +1,20 @@
+<div>
+    <p class="title">Meus projetos</p>
+    <div class="container-card">
+        <mat-card class="card" *ngFor="let item of repos">
+            <mat-card-header>
+                <mat-card-title><b>{{item.name}}</b></mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p class="text">{{item.description}}</p>
+                <mat-divider></mat-divider>
+            </mat-card-content>
+            <div class="card-holder-button">
+                <button mat-raised-button (click)="navigateToProject(item.html_url)">
+                    <img height="30px" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                </button>
+            </div>
+        </mat-card>
+
+    </div>
+</div>

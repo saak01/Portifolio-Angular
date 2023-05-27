@@ -1,0 +1,32 @@
+@import '/src/styles/utils';
+
+.container-card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.card {
+    max-width: 380px;
+    min-width: 280px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.card-holder-button{
+    display: flex;
+    align-content: center;
+    height: 100%;
+    align-items: end;
+    margin: 10px 10px;
+}
+
+.text{
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: justify;
+}

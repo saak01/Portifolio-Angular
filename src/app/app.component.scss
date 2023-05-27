@@ -1,0 +1,11 @@
+.holder-container{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 60%;
+    @media screen and (max-width: 600px) {
+        width: 80%;
+    }
+}

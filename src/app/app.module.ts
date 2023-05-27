@@ -3,14 +3,43 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { HeaderComponent } from './modules/header/components/header/header.component';
+import { HomeComponent } from './modules/home/components/home/home.component';
+import { ProfessionalExperiencesComponent } from './modules/professional-experiences/components/professional-experiences/professional-experiences.component';
+import { MyProjectsComponent } from './modules/my-projects/components/my-projects/my-projects.component'; 
+
+import {MatToolbarModule} from '@angular/material/toolbar'; 
+import {MatSidenavModule} from '@angular/material/sidenav'; 
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card'; 
+import {MatDividerModule} from '@angular/material/divider'; 
+import {MatButtonModule} from '@angular/material/button';
+import { AboutMeComponent } from './modules/about-me/components/about-me/about-me.component';
+import { ContactUsComponent } from './modules/contact-us/components/contact-us/contact-us.component'; 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    ProfessionalExperiencesComponent,
+    MyProjectsComponent,
+    AboutMeComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatCardModule,
+    MatDividerModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
