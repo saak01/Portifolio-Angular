@@ -9,6 +9,8 @@ import { HeaderComponent } from './modules/header/components/header/header.compo
 import { HomeComponent } from './modules/home/components/home/home.component';
 import { ProfessionalExperiencesComponent } from './modules/professional-experiences/components/professional-experiences/professional-experiences.component';
 import { MyProjectsComponent } from './modules/my-projects/components/my-projects/my-projects.component'; 
+import { AboutMeComponent } from './modules/about-me/components/about-me/about-me.component';
+import { ContactUsComponent } from './modules/contact-us/components/contact-us/contact-us.component'; 
 
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatSidenavModule} from '@angular/material/sidenav'; 
@@ -16,8 +18,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card'; 
 import {MatDividerModule} from '@angular/material/divider'; 
 import {MatButtonModule} from '@angular/material/button';
-import { AboutMeComponent } from './modules/about-me/components/about-me/about-me.component';
-import { ContactUsComponent } from './modules/contact-us/components/contact-us/contact-us.component'; 
+import { MatListModule } from '@angular/material/list';
+import { NavComponent } from './modules/nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { ContactUsComponent } from './modules/contact-us/components/contact-us/c
     ProfessionalExperiencesComponent,
     MyProjectsComponent,
     AboutMeComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,9 @@ import { ContactUsComponent } from './modules/contact-us/components/contact-us/c
     HttpClientModule,
     MatCardModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

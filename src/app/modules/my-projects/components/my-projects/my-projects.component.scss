@@ -9,12 +9,16 @@
 
 .card {
     max-width: 380px;
-    min-width: 280px;
+    min-width: 380px;
     border: 1px solid #e1e1e1;
     border-radius: 5px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
+    @media screen and (max-width: 600px) {
+        max-width: 290px;
+        min-width: 290px;
+    }
 }
 
 .card-holder-button{

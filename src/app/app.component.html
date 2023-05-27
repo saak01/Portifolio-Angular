@@ -1,22 +1,90 @@
-<app-header></app-header>
+<section>
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #drawer class="sidenav" fixedInViewport
+            [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+            [opened]="false">
+            <mat-nav-list>
+                <div class="content" style="margin-top: 10px; margin-bottom: 10px;">
+                    <button>
+                        <a class="content-text" (click)="gotToAboutMe()">Sobre mim</a>
+                    </button>
+                </div>
+                <div class="content" style="margin-top: 10px; margin-bottom: 10px;">
+                    <button>
+                        <a class="content-text" (click)="goToMyProjects()" >Projetos</a>
+                    </button>
+                </div>
+                <div class="content" style="margin-top: 10px; margin-bottom: 10px;">
+                    <button>
+                        <a class="content-text" (click)="goToWorkExperience()">Experiências</a>
+                    </button>
+                </div>
+                <div class="content" style="margin-top: 10px; margin-bottom: 10px;">
+                    <button>
+                        <a class="content-text" (click)="goToContacts()">Contato</a>
+                    </button>
+                </div>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <mat-toolbar >
+                <button type="button" aria-label="Toggle sidenav" (click)="drawer.toggle()"
+                    *ngIf="isHandset$ | async" mat-icon-button>
+                    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+                </button>
+                <mat-toolbar>
+                    <div>
+                        <span class="title">João</span>
+                        <span class="sub-title">Victor</span>
+                    </div>
+                    <div class="containter-content" *ngIf="!button">
 
-<section class="holder-container">
-    <app-home class="container"></app-home>
-</section>
+                        <div class="content">
+                            <button>
+                                <a routerLinkActive="active" class="content-text" (click)="gotToAboutMe()">Sobre mim</a>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <button>
+                                <a routerLinkActive="active" class="content-text" (click)="goToMyProjects()" >Projetos</a>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <button>
+                                <a  routerLinkActive="active" class="content-text" (click)="goToWorkExperience()">Experiências</a>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <button>
+                                <a  routerLinkActive="active" class="content-text" (click)="goToContacts()">Contato</a>
+                            </button>
+                        </div>
+                    </div>
+                </mat-toolbar>
 
-<section class="holder-container">
-    <app-about-me class="container"></app-about-me>
-</section>
+            </mat-toolbar>
+            <!-- Add Content Here -->
+            <section class="holder-container">
+                <app-home class="container"></app-home>
+            </section>
 
-<section class="holder-container">
-    <app-my-projects class="container"></app-my-projects>
-</section>
+            <section class="holder-container" id="about-me">
+                <app-about-me class="container"></app-about-me>
+            </section>
 
-<section class="holder-container">
-    <app-professional-experiences class="container"></app-professional-experiences>
-</section>
+            <section class="holder-container">
+                <app-my-projects class="container" id="my-projects"></app-my-projects>
+            </section>
+
+            <section class="holder-container">
+                <app-professional-experiences class="container" id="work-experience"></app-professional-experiences>
+            </section>
 
 
-<section class="holder-container">
-    <app-contact-us class="container"></app-contact-us>
+            <section class="holder-container">
+                <app-contact-us class="container" id="contact"></app-contact-us>
+            </section>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
 </section>
