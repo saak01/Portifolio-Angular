@@ -4,7 +4,7 @@ h1{
     font-weight: 200 ;
     font-size: 2.5rem;
     @media screen and (max-width: 600px) {
-        font-size: 1.57rem;
+        font-size: 1.5rem;
       }
 }
 
@@ -13,3 +13,23 @@ b{
 }
 
 
+.home-holder-content {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 600px) {
+        display: block;
+        align-items: center;
+    }
+    
+}
+
+.group_icons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    @media screen and (max-width: 600px) {
+    margin-top: -20px;
+    margin-left: -8px;
+    margin-bottom: 20px;  
+    }
+}

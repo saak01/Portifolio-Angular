@@ -10,7 +10,6 @@ import { HomeComponent } from './modules/home/components/home/home.component';
 import { ProfessionalExperiencesComponent } from './modules/professional-experiences/components/professional-experiences/professional-experiences.component';
 import { MyProjectsComponent } from './modules/my-projects/components/my-projects/my-projects.component'; 
 import { AboutMeComponent } from './modules/about-me/components/about-me/about-me.component';
-import { ContactUsComponent } from './modules/contact-us/components/contact-us/contact-us.component'; 
 
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatSidenavModule} from '@angular/material/sidenav'; 
@@ -30,7 +29,6 @@ import { LayoutModule } from '@angular/cdk/layout';
     ProfessionalExperiencesComponent,
     MyProjectsComponent,
     AboutMeComponent,
-    ContactUsComponent,
     NavComponent
   ],
   imports: [
