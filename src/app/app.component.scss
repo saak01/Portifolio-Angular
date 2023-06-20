@@ -11,12 +11,13 @@
 }
 
 .mat-toolbar{
-    background-color: transparent;
+    background-color: #fafafa;
     position: fixed;
     display: flex;
     justify-content: space-between;
     background-color: none;
     flex: 1 1 auto;
+    height: 47px;
     @media screen and (max-width: 600px) {
         position: relative;
     }
